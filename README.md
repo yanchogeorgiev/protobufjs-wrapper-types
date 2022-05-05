@@ -10,7 +10,9 @@ This package is a **superset** of Protobuf.js. It just injects a custom handler 
 
 ## How to use the custom loader with NestJS
 
-`npm i @enriqcg/protobufjs-wrapper-types`
+```
+npm i @enriqcg/protobufjs-wrapper-types
+```
 
 ```typescript
 app.connectMicroservice<MicroserviceOptions>({
