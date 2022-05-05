@@ -4,9 +4,7 @@
 
 Protobuf.js does not have support for [Wrapper Types](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf) other than `.google.protobuf.Any`.
 
-This (small) package adds Javascript support for [`google.protobuf.Timestamp`](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Timestamp) through the Date class.
-
-This means that any Date object with Protobuf type `google.protobuf.Timestamp` will be serialized to Google's Wrapper Type, and be deserialized back into a Date object.
+This (small) package adds Javascript support for [`google.protobuf.Timestamp`](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Timestamp) through the Date class. Any Date object with Protobuf type `google.protobuf.Timestamp` will be serialized to Google's Wrapper Type, and be deserialized back into a Date object.
 
 This package is a **superset** of Protobuf.js. It just injects a custom handler for `google.protobuf.Timestamp` and then calls the upstream `protobufjs.loader()`. Just the synchronous loader function is implemented as this is intended to be used with NestJS.
 
