@@ -1,0 +1,28 @@
+{
+  "name": "@enriqcg/protobufjs-wrapper-types",
+  "version": "1.0.0",
+  "description": "Superset of protobuf.js to add support for some Protocol Buffer wrappers types.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnriqCG/protobufjs-wrapper-types.git"
+  },
+  "author": "Enrique Carpintero <ecg.337@icloud.com> (https://enriqcg.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EnriqCG/protobufjs-wrapper-types/issues"
+  },
+  "homepage": "https://github.com/EnriqCG/protobufjs-wrapper-types#readme",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.11",
+    "protobufjs": "^6.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/protobufjs": "^6.0.0",
+    "typescript": "^4.6.4"
+  }
+}
