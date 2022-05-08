@@ -1,6 +1,6 @@
 {
   "name": "@enriqcg/protobufjs-wrapper-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Superset of protobuf.js to add support for some Protocol Buffer wrappers types.",
   "main": "dist/index.js",
   "scripts": {
