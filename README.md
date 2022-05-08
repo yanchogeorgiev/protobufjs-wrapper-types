@@ -1,5 +1,7 @@
 # Protobufjs with support for .google.protobuf.Timestamp
 
+[![NPM](https://img.shields.io/npm/l/@enriqcg/protobufjs-wrapper-types)](https://www.npmjs.com/package/@enriqcg/protobufjs-wrapper-types)
+
 ## Why does this package exist?
 
 Protobuf.js does not have support for [Wrapper Types](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf) other than `.google.protobuf.Any`.
