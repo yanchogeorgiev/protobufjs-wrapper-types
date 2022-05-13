@@ -1,5 +1,6 @@
 import { loadSync as _loadSync, Options, PackageDefinition } from '@grpc/proto-loader';
 import { wrappers } from 'protobufjs';
+import { struct } from 'pb-util';
 
 export const loadSync = (filename: string | string[], options?: Options): PackageDefinition => {
   wrappers['.google.protobuf.Timestamp'] = {
@@ -21,14 +22,8 @@ export const loadSync = (filename: string | string[], options?: Options): Packag
      * @param {Object.<string, *>} value the JSON object.
      * @returns {Struct}
      */
-     fromObject(json: {[key: string]: any}): any {
-      const fields = {};
-      Object.keys(json).forEach(key => {
-        // If value is undefined, do not encode it.
-        if (typeof json[key] === 'undefined') return;
-        fields[key] = this.fromObject(json[key]);
-      });
-      return {fields};
+    fromObject(json: { [key: string]: any }): any {
+      return struct.encode(json);
     },
     /**
      * Decodes a protobuf {@link Struct} into a JSON object.
@@ -36,12 +31,8 @@ export const loadSync = (filename: string | string[], options?: Options): Packag
      * @param {Struct} struct the protobuf struct.
      * @returns {Object.<string, *>}
      */
-     toObject({fields = {}}: any): {[key: string]: any} {
-      const json = {};
-      Object.keys(fields).forEach(key => {
-        json[key] = this.toObject(fields[key]);
-      });
-      return json;
+    toObject({ fields = {} }: any): { [key: string]: any } {
+      return struct.decode({ fields });
     }
   };
 

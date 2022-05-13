@@ -19,6 +19,9 @@
   "homepage": "https://github.com/EnriqCG/protobufjs-wrapper-types#readme",
   "dependencies": {
     "@grpc/proto-loader": "^0.6.11",
+    "i": "^0.3.7",
+    "npm": "^8.10.0",
+    "pb-util": "^1.0.3",
     "protobufjs": "^6.11.2"
   },
   "devDependencies": {
