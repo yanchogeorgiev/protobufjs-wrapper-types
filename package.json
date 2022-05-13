@@ -4,7 +4,8 @@
   "description": "Superset of protobuf.js to add support for some Protocol Buffer wrappers types.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
